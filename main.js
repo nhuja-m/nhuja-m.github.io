@@ -1,14 +1,11 @@
-// source: https://github.com/AndrewSink/STL-to-ASCII-Generator/blob/main/src/script.js
+// much of the inspiration and some blocks of code from: https://github.com/AndrewSink/STL-to-ASCII-Generator/blob/main/src/script.js
+// & from: https://github.com/fireship-io/threejs-scroll-animation-demo
 
 import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-// import html2canvas from 'html2canvas';
-
-
 
 //Create a clock for rotation
 const clock = new THREE.Clock()
@@ -48,18 +45,12 @@ const sizes = {
     height: window.innerHeight
 }
 
-// Camera
+// Camera Renderer Composer
 const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 2000)
-
-//Renderer
-// const renderer = new THREE.WebGLRenderer({
-//   canvas: document.querySelector('#bg'),
-// });
 
 const renderer = new THREE.WebGLRenderer();
 const composer = new EffectComposer( renderer );
 
-// const renderer = new THREE.WebGLRenderer();
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -79,12 +70,9 @@ function createEffect() {
 
 createEffect()
 
-// document.body.append(effect.domElement)
 document.getElementById('bg').appendChild(effect.domElement);
 var eff = effect.domElement;
 eff.id = 'effectID';
-
-
 
 stlLoader.load(
     toLoad,
@@ -93,10 +81,6 @@ stlLoader.load(
         myMesh.material = material;
         myMesh.geometry = geometry;
 
-        // var tempGeometry = new THREE.Mesh(geometry, material)
-        // myMesh.position.copy = (tempGeometry.position)
-
-        // geometry.computeVertexNormals();
         myMesh.geometry.center()
 
         myMesh.rotation.x = -90 * Math.PI / 180;
@@ -141,13 +125,9 @@ stlLoader.load(
           requestAnimationFrame(animate);
           myMesh.rotation.z += 0.002;
 
-          effect.render(scene, camera);
-          
+          effect.render(scene, camera); 
         }
-
         animate();
-
-        
     }
 )
 
