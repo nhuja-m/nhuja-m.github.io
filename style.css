@@ -114,6 +114,10 @@ a:hover {
     display: block;
   }
 
+  #effectID {
+    position: fixed;
+  }
+
   header {
     margin-left: 5px;
   }
