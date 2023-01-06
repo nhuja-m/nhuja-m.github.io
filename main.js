@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js'
 import { AsciiEffect } from 'three/examples/jsm/effects/AsciiEffect.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 
 //Create a clock for rotation
 const clock = new THREE.Clock()
