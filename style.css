@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 
-.container {
+/* .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -9,6 +9,14 @@
 #bg {
   grid-column: 2 / 3;
   grid-row: 1 / -1;
+} */
+
+.container {
+  display: block;
+}
+
+#bg {
+  margin: auto;
 }
 
 #effectID {
@@ -39,7 +47,7 @@ main {
   margin: 0px auto;
   padding: 120px 0px;
   
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -108,7 +116,7 @@ a:hover {
   margin-top: 250px;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
 
   .container {
     display: block;
@@ -121,4 +129,4 @@ a:hover {
   header {
     margin-left: 5px;
   }
-}
+} */
