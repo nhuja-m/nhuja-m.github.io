@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 
-.container {
+/* .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -11,6 +11,24 @@
   grid-row: 1 / -1;
 }
 
+
+#effectID {
+  position: fixed;
+  margin-top: 45px;
+} */
+
+.container {
+  display: block;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+} 
+
+#bg {
+  margin: auto;
+  /* grid-column: 2 / 3;
+  grid-row: 1 / -1; */
+}
 
 #effectID {
   position: fixed;
